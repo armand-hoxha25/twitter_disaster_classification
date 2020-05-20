@@ -3,12 +3,12 @@ A web app predicting whether a tweet refers to a disaster or a call for help.
 
 ##### Python Libraries
 
-nltk (3.2.5)
-scikit-learn (0.19.1)
-numpy (1.12.1)  
-pandas (0.23.3)
-matplotlib (2.1.0)
-Flask (0.12.4)
+nltk (3.2.5) <br>
+scikit-learn (0.19.1)  <br>
+numpy (1.12.1) <br>
+pandas (0.23.3) <br>
+matplotlib (2.1.0) <br>
+flask (0.12.4) <br>
 
 ##### Files
 /data/**disaster_messages.csv** - messages/tweets in their original language, and english translation with id numbers
