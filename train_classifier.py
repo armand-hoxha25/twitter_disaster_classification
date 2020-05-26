@@ -74,8 +74,17 @@ def build_model():
     pipeline = Pipeline(steps=[
     ('count_vector', CountVectorizer()),
     ('tfidf',TfidfTransformer()),
-    ('clf', MultiOutputClassifier(RandomForestClassifier(n_estimators=100), n_jobs = -1))
+    ('clf', RandomForestClassifier())
     ])
+
+    # params dict to tune a model
+    parameters = {
+    "clf__n_estimators":[5,10,20,50,100]
+    }
+    # instantiate a gridsearchcv object with the params defined
+    cv = GridSearchCV(pipeline, param_grid=parameters) 
+    return cv
+
     return pipeline
 
 def evaluate_model(model, X_test, Y_test, category_names):
